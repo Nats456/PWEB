@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 4</title>
+    <style>
+        .responsive-div {
+            width: 500px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+
+        @media (max-width: 420px) {
+            .responsive-div {
+                background-color: gray;
+            }
+        }
+
+        @media (min-width: 421px) and (max-width: 768px) {
+            .responsive-div {
+                background-color: orange;
+            }
+        }
+
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .responsive-div {
+                background-color: purple;
+            }
+        }
+
+        @media (min-width: 1025px) and (max-width: 1366px) {
+            .responsive-div {
+                background-color: pink;
+            }
+        }
+
+        @media (min-width: 1367px) and (max-width: 1920px) {
+            .responsive-div {
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 1921px) {
+            .responsive-div {
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="responsive-div">
+        <h2 class="color-name">Cinza</h2>
+    </div>
+
+    <script>
+        function updateColorName() {
+            const width = window.innerWidth;
+            const colorNameElement = document.querySelector('.color-name');
+            
+            if (width <= 420) {
+                colorNameElement.textContent = 'Cinza';
+            } else if (width > 420 && width <= 768) {
+                colorNameElement.textContent = 'Laranja';
+            } else if (width > 768 && width <= 1024) {
+                colorNameElement.textContent = 'Roxo';
+            } else if (width > 1024 && width <= 1366) {
+                colorNameElement.textContent = 'Rosa';
+            } else if (width > 1366 && width <= 1920) {
+                colorNameElement.textContent = 'Amarelo';
+            } else {
+                colorNameElement.textContent = 'Verde';
+            }
+        }
+
+        // Chama a função quando a página é carregada e ao redimensionar a tela
+        window.addEventListener('load', updateColorName);
+        window.addEventListener('resize', updateColorName);
+    </script>
+</body>
+</html>
+
