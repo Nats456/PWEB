@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedra, Papel, Tesoura</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .choice-btn {
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+ 
+    <h1>Pedra, Papel, Tesoura (100% atualizado, patch 2024)</h1>
+    <p>Escolha uma opção:</p>
+    <button class="choice-btn" onclick="jogar('pedra')">Pedra</button>
+    <button class="choice-btn" onclick="jogar('papel')">Papel</button>
+    <button class="choice-btn" onclick="jogar('tesoura')">Tesoura</button>
+ 
+    <div class="result" id="resultado"></div>
+ 
+    <script>
+        function jogar(escolhaUsuario) {
+            const escolhas = ['pedra', 'papel', 'tesoura'];
+            const escolhaComputador = escolhas[Math.floor(Math.random() * 3)];
+ 
+            let resultado = '';
+ 
+            if (escolhaUsuario === escolhaComputador) {
+                resultado = 'Empate!';
+            } else if (
+                (escolhaUsuario === 'pedra' && escolhaComputador === 'tesoura') ||
+                (escolhaUsuario === 'tesoura' && escolhaComputador === 'papel') ||
+                (escolhaUsuario === 'papel' && escolhaComputador === 'pedra')
+            ) {
+                resultado = 'Você venceu! ' + escolhaUsuario + ' ganha de ' + escolhaComputador;
+            } else {
+                resultado = 'Você perdeu! ' + escolhaComputador + ' ganha de ' + escolhaUsuario;
+            }
+ 
+            document.getElementById('resultado').textContent = resultado;
+        }
+    </script>
+ 
+</body>
+</html>
