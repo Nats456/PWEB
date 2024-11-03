@@ -1,0 +1,47 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    padding: 20px;
+}
+
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+
+input[type="text"] {
+    width: 350px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+
+input[type="radio"] {
+    margin: 1px;
+}
+
+
+h2 {
+    margin-top: 30px; 
+    color: #4CAF50;
+    margin-bottom: 10px; 
+}
+
+
+#resultado {
+    width: 350px; 
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    min-height: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}

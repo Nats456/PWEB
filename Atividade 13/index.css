@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+}
+.image-container {
+    text-align: center;
+}
+img {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
